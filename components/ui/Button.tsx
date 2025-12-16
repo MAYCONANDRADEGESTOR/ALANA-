@@ -6,6 +6,7 @@ interface ButtonProps {
   text?: string;
   subtext?: string;
   className?: string;
+  subtextClassName?: string;
   fullWidth?: boolean;
 }
 
@@ -13,6 +14,7 @@ export const Button: React.FC<ButtonProps> = ({
   text = "Agendar primeira consulta gratuita", 
   subtext = "Resposta rápida • Sem compromisso",
   className = "",
+  subtextClassName = "text-gray-500",
   fullWidth = false
 }) => {
   return (
@@ -23,9 +25,9 @@ export const Button: React.FC<ButtonProps> = ({
         rel="noopener noreferrer"
         className={`
           group relative flex items-center justify-center gap-3
-          bg-primary-600 hover:bg-primary-500 text-white 
+          bg-primary-600 hover:bg-primary-700 text-white 
           font-bold text-lg py-4 px-8 rounded-full 
-          shadow-lg hover:shadow-primary-500/30 transition-all duration-300 
+          shadow-lg hover:shadow-primary-600/30 transition-all duration-300 
           active:scale-95
           ${fullWidth ? 'w-full' : ''}
           ${className}
@@ -35,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
         <span>{text}</span>
       </a>
       {subtext && (
-        <span className="mt-2 text-xs text-gray-500 font-medium tracking-wide uppercase">
+        <span className={`mt-2 text-xs font-medium tracking-wide uppercase ${subtextClassName}`}>
           {subtext}
         </span>
       )}
