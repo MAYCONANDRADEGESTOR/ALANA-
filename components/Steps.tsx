@@ -56,8 +56,7 @@ export const Steps: React.FC = () => {
 
         <div className="mt-14 text-center">
             <div className="inline-flex items-center gap-2 bg-white border border-primary-100 py-3 px-6 rounded-full shadow-sm text-primary-800 text-sm font-medium">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                Primeira consulta gratuita e sem compromisso.
+                Consulta gratuita e sem compromisso.
             </div>
         </div>
       </div>
