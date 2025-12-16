@@ -13,8 +13,8 @@ export const IntermediateCTA: React.FC = () => {
         </p>
         <div className="flex justify-center">
           <Button 
-            text="Quero agendar agora" 
-            subtext="Totalmente gratuito e confidencial" 
+            text="Agendar Agora" 
+            subtext="Gratuito e confidencial" 
             className="!bg-primary-600 hover:!bg-primary-500 !text-white shadow-lg shadow-primary-900/50"
             subtextClassName="text-gray-400"
           />

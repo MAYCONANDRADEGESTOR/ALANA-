@@ -11,8 +11,8 @@ export const Hero: React.FC = () => {
       
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row-reverse lg:items-center lg:gap-12 lg:px-6">
         
-        {/* Image Container */}
-        <div className="w-full relative h-[55vh] lg:h-[750px] lg:w-1/2">
+        {/* Image Container - Com animação */}
+        <div className="w-full relative h-[55vh] lg:h-[750px] lg:w-1/2 opacity-0 animate-slide-up">
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent z-10 lg:hidden"></div>
             <img 
               src={IMAGES.hero} 
@@ -20,8 +20,8 @@ export const Hero: React.FC = () => {
               className="w-full h-full object-cover object-top lg:rounded-3xl shadow-2xl"
             />
             
-            {/* Float Badge - Ajustado para bottom-20 no mobile para não ser cortado pelo card */}
-            <div className="absolute bottom-20 lg:bottom-6 left-6 z-20 bg-white/95 backdrop-blur-md py-3 px-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            {/* Float Badge */}
+            <div className="absolute bottom-20 lg:bottom-6 left-6 z-20 bg-white/95 backdrop-blur-md py-3 px-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-4 duration-1000 animate-delay-600">
                 <div className="bg-primary-100 p-2.5 rounded-full text-primary-600">
                     <Star size={18} fill="currentColor" />
                 </div>
@@ -32,23 +32,23 @@ export const Hero: React.FC = () => {
             </div>
         </div>
 
-        {/* Content Container */}
+        {/* Content Container - Com animação escalonada */}
         <div className="px-6 -mt-12 relative z-20 lg:mt-0 lg:w-1/2 lg:pl-0 lg:pr-6">
             <div className="bg-white/95 backdrop-blur-xl lg:bg-transparent rounded-2xl p-8 shadow-2xl lg:shadow-none border border-gray-50 lg:border-none">
-                <div className="flex items-center gap-2 text-primary-700 font-semibold text-xs tracking-[0.2em] uppercase mb-4">
+                <div className="flex items-center gap-2 text-primary-700 font-semibold text-xs tracking-[0.2em] uppercase mb-4 opacity-0 animate-slide-up animate-delay-200">
                     <MapPin size={14} />
                     {EXPERT_DATA.city}
                 </div>
                 
-                <h1 className="font-serif text-4xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+                <h1 className="font-serif text-4xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-6 opacity-0 animate-slide-up animate-delay-400">
                     Eu sou <span className="text-primary-600">{EXPERT_DATA.name}</span>.
                 </h1>
                 
-                <p className="text-gray-600 text-lg lg:text-xl leading-relaxed mb-8 max-w-lg font-light">
+                <p className="text-gray-600 text-lg lg:text-xl leading-relaxed mb-8 max-w-lg font-light opacity-0 animate-slide-up animate-delay-600">
                     Dentista especialista em transformar sorrisos e recuperar sua confiança. Atendimento humanizado e resultados naturais.
                 </p>
 
-                <div className="w-full max-w-md">
+                <div className="w-full max-w-md opacity-0 animate-slide-up animate-delay-600">
                     <Button fullWidth className="shadow-primary-500/20" />
                 </div>
             </div>

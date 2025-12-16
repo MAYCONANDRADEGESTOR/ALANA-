@@ -9,10 +9,10 @@ export const FinalCTA: React.FC = () => {
           Seu novo sorriso começa com uma mensagem
         </h2>
         <p className="text-primary-100 text-lg mb-10 font-light opacity-90">
-          Você está a um clique de descobrir a melhor versão do seu sorriso. Sem compromisso, sem taxas escondidas. Apenas uma conversa honesta sobre sua saúde e estética.
+          Você está a um clique de descobrir a melhor versão do seu sorriso. Sem compromisso, sem taxas escondidas. Apenas uma conversa honesta.
         </p>
         <Button 
-          text="Agendar minha avaliação gratuita" 
+          text="Agendar Avaliação" 
           className="!bg-white !text-primary-900 hover:!bg-gray-100 shadow-xl border-none"
           subtextClassName="!text-white/80"
         />
