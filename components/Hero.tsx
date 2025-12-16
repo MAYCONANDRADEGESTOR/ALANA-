@@ -11,13 +11,19 @@ export const Hero: React.FC = () => {
       
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row-reverse lg:items-center lg:gap-12 lg:px-6">
         
-        {/* Image Container - Com animação */}
-        <div className="w-full relative h-[55vh] lg:h-[750px] lg:w-1/2 opacity-0 animate-slide-up">
+        {/* Image Container - Com animação e Efeito Gloss */}
+        <div className="w-full relative h-[55vh] lg:h-[750px] lg:w-1/2 opacity-0 animate-slide-up lg:rounded-3xl shadow-2xl overflow-hidden group">
+            {/* Gradiente inferior para mobile (legibilidade) */}
             <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent z-10 lg:hidden"></div>
+            
+            {/* Efeito Gloss / Brilho Vítreo Transparente */}
+            <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-tr from-white/0 via-white/30 to-white/0 opacity-70 mix-blend-overlay"></div>
+            <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-white/20 to-transparent opacity-40"></div>
+
             <img 
               src={IMAGES.hero} 
               alt={EXPERT_DATA.name}
-              className="w-full h-full object-cover object-top lg:rounded-3xl shadow-2xl"
+              className="w-full h-full object-cover object-top transition-transform duration-1000 ease-out group-hover:scale-105"
             />
             
             {/* Float Badge */}
