@@ -37,18 +37,17 @@ export const FAQ: React.FC = () => {
   );
 };
 
+// Componente Details customizado para suportar a animação via CSS global
 const Details: React.FC<{summary: string, content: string}> = ({ summary, content }) => (
-    <details className="group bg-gray-50 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-        <summary className="flex cursor-pointer items-center justify-between gap-1.5 p-6 text-gray-900 font-medium hover:bg-gray-100 transition-colors">
+    <details className="group bg-gray-50 rounded-xl overflow-hidden cursor-pointer">
+        <summary className="flex items-center justify-between gap-1.5 p-6 text-gray-900 font-medium hover:bg-gray-100 transition-colors select-none">
             <h3 className="text-base md:text-lg">{summary}</h3>
-            <div className="white-space-nowrap text-primary-600">
-                <ChevronDown className="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180" />
+            <div className="text-primary-600 transition-transform duration-300 group-open:-rotate-180">
+                <ChevronDown className="h-5 w-5 shrink-0" />
             </div>
         </summary>
-        <div className="px-6 pb-6 pt-2">
-            <p className="text-gray-600 leading-relaxed font-light text-sm md:text-base">
-                {content}
-            </p>
+        <div className="px-6 text-gray-600 leading-relaxed font-light text-sm md:text-base opacity-0 group-open:opacity-100 transition-opacity duration-500 delay-100 pb-6">
+            {content}
         </div>
     </details>
 );

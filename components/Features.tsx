@@ -7,12 +7,12 @@ export const Features: React.FC = () => {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          {/* Imagem Pulsante Adicionada */}
-          <div className="flex justify-center mb-6">
+          {/* Imagem Pulsante Adicionada - Tamanho Aumentado */}
+          <div className="flex justify-center mb-10">
             <img 
               src="https://i.imgur.com/YweKXdz.jpeg" 
               alt="Selo de Qualidade" 
-              className="h-48 md:h-56 w-auto object-contain animate-heartbeat drop-shadow-xl rounded-full"
+              className="w-72 h-72 md:w-96 md:h-96 object-cover animate-heartbeat drop-shadow-2xl rounded-full"
             />
           </div>
           

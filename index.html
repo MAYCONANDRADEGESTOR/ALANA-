@@ -37,6 +37,10 @@
             animation: {
               'slide-up': 'slideUp 0.8s ease-out forwards',
               'heartbeat': 'heartbeat 3s ease-in-out infinite',
+              'shimmer': 'shimmer 2.5s infinite',
+              'scroll': 'scroll 40s linear infinite',
+              'scroll-reverse': 'scrollReverse 40s linear infinite',
+              'float': 'float 6s ease-in-out infinite',
             },
             keyframes: {
               slideUp: {
@@ -46,6 +50,22 @@
               heartbeat: {
                 '0%, 100%': { transform: 'scale(1)' },
                 '50%': { transform: 'scale(1.05)' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-150%) skewX(-12deg)' },
+                '100%': { transform: 'translateX(150%) skewX(-12deg)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              scrollReverse: {
+                '0%': { transform: 'translateX(-50%)' },
+                '100%': { transform: 'translateX(0)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
               }
             }
           }
@@ -68,14 +88,23 @@
         background: #9f1239;
       }
       
-      .animate-delay-200 {
-        animation-delay: 200ms;
+      .animate-delay-200 { animation-delay: 200ms; }
+      .animate-delay-400 { animation-delay: 400ms; }
+      .animate-delay-600 { animation-delay: 600ms; }
+
+      /* Details/Summary Smooth Animation */
+      details > summary {
+        list-style: none;
       }
-      .animate-delay-400 {
-        animation-delay: 400ms;
+      details > summary::-webkit-details-marker {
+        display: none;
       }
-      .animate-delay-600 {
-        animation-delay: 600ms;
+      details {
+        transition: max-height 0.3s ease-in-out; 
+        max-height: 80px; /* Altura do summary aproximada */
+      }
+      details[open] {
+        max-height: 500px; /* Valor arbitrário alto o suficiente para o conteúdo */
       }
     </style>
   <script type="importmap">

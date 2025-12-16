@@ -6,8 +6,8 @@ import { MapPin, Star } from 'lucide-react';
 export const Hero: React.FC = () => {
   return (
     <section className="relative w-full overflow-hidden bg-white pb-16 pt-0 lg:pt-0">
-      {/* Background decoration - mais sutil */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3 z-0"></div>
+      {/* Background decoration - Animado */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-50 rounded-full blur-3xl opacity-60 -translate-y-1/2 translate-x-1/3 z-0 animate-float"></div>
       
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col lg:flex-row-reverse lg:items-center lg:gap-12 lg:px-6">
         
