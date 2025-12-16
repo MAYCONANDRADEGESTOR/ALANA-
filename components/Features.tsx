@@ -7,12 +7,15 @@ export const Features: React.FC = () => {
     <section className="py-24 px-6 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 max-w-2xl mx-auto">
-          {/* Imagem Pulsante Adicionada - Tamanho Aumentado */}
-          <div className="flex justify-center mb-10">
+          {/* Imagem de Destaque - Formato Retangular (Estilo Foto Premium) */}
+          <div className="flex justify-center mb-10 relative group">
+             {/* Elemento decorativo de fundo */}
+             <div className="absolute w-full max-w-[300px] md:max-w-[380px] h-full bg-primary-100 rounded-2xl rotate-3 scale-[0.98] transition-transform duration-500 group-hover:rotate-6 z-0"></div>
+            
             <img 
               src="https://i.imgur.com/YweKXdz.jpeg" 
-              alt="Selo de Qualidade" 
-              className="w-72 h-72 md:w-96 md:h-96 object-cover animate-heartbeat drop-shadow-2xl rounded-full"
+              alt="Dra. Alana Rodrigues" 
+              className="relative z-10 w-full max-w-[300px] md:max-w-[380px] aspect-[4/5] object-cover rounded-2xl shadow-2xl transition-transform duration-500 group-hover:-translate-y-2"
             />
           </div>
           
